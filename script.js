@@ -200,4 +200,19 @@ document.addEventListener("DOMContentLoaded", () => {
     updateActiveButton(currentSection); // Highlight the "Home" button
 });
 
-console.log("Script is running!");
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const emailBtn = document.getElementById('emailBtn');
+  const email = 'mixalisanagnostou2003@gmail.com';
+  // Add click event to copy email
+  emailBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(email)
+      .then(() => {
+        const tooltip = tippy.getInstance(emailBtn);
+      })
+      .catch(err => {
+        console.error('Failed to copy email: ', err);
+      });
+  });
+});

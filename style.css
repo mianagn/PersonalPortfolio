@@ -36,10 +36,11 @@
 
 #home .frame {
     position: relative;
-    width: 90rem; /* 1440px / 16 */
-    height: 62.5rem; /* 1000px / 16 */
-    top: 0.875rem; /* 14px / 16 */
-    left: 11.875rem; /* 174px / 16 */
+    width: 90%;
+    max-width: 90rem;
+    height: 62.5rem;
+    margin: 0 auto;
+    top: 0.875rem;
 }
 
 #home .text-wrapper {
@@ -78,7 +79,7 @@
     border-radius: 1.25rem; /* 20px / 16 */
     opacity: 0.9;
     border: 0.2625rem solid #4fb6c9; /* 1px / 16 */
-    box-shadow: 0 0 5px #4fb6c9, 0 0 10px #4fb6c9; /* Softer neon glow effect */
+    box-shadow: 0 0 0.3125rem #4fb6c9, 0 0 0.625rem #4fb6c9; /* Softer neon glow effect */
 }
 
 #home .skills {
@@ -125,13 +126,13 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 0 20px #4fb6c9, 0 0 40px #4fb6c9, 0 0 60px #4fb6c9; /* Neon glow effect */
+    box-shadow: 0 0 1.25rem #4fb6c9, 0 0 2.5rem #4fb6c9, 0 0 3.75rem #4fb6c9; /* Neon glow effect */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #home .overlap-header:hover {
     transform: scale(1.1); /* Slightly enlarges the button on hover */
-    box-shadow: 0 0 30px #4fb6c9, 0 0 60px #4fb6c9, 0 0 90px #4fb6c9; /* Intensifies the glow on hover */
+    box-shadow: 0 0 1.875rem #4fb6c9, 0 0 3.75rem #4fb6c9, 0 0 5.625rem #4fb6c9; /* Intensifies the glow on hover */
 }
 
 #home .text-wrapper-2 {
@@ -143,7 +144,7 @@
     text-align: center;
     letter-spacing: 0;
     line-height: normal;
-    text-shadow: 0 0 10px #4fb6c9, 0 0 20px #4fb6c9, 0 0 30px #4fb6c9; /* Neon text glow */
+    text-shadow: 0 0 0.625rem #4fb6c9, 0 0 1.25rem #4fb6c9, 0 0 1.875rem #4fb6c9; /* Neon text glow */
 }
 
 #home .profile-picture {
@@ -233,7 +234,7 @@
     font-size: 1.875rem; /* 30px / 16 */
     text-align: center;
     padding: 0.5rem 1rem;
-    border: 2px solid #8f8a8a;
+    border: 0.125rem solid #8f8a8a; /* 2px -> 0.125rem */
     border-radius: 0.5rem;
     transition: all 0.3s ease;
 }
@@ -288,8 +289,8 @@
 }
 
 .projects-heading {
-    position:relative;
-    top:14rem;
+    position: relative;
+    top: 14rem;
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 2rem;
@@ -348,12 +349,12 @@
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 5px #4fb6c9, 0 0 10px #4fb6c9; /* Subtle glow effect */
+    box-shadow: 0 0 0.625rem #4fb6c9, 0 0 1.25rem #8ccad4; /* Subtle glow effect */
 }
 
 .project a:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px #4fb6c9, 0 0 20px #4fb6c9, 0 0 30px #4fb6c9; /* Intensify the glow on hover */
+    box-shadow: 0 0 0.625rem #4fb6c9, 0 0 1.25rem #4fb6c9, 0 0 1.875rem #4fb6c9; /* Intensify the glow on hover */
 }
 
 
@@ -392,8 +393,8 @@
     height: 9rem; /* Make it circular */
     border-radius: 50%; /* Circular image */
     margin-bottom: 1.5rem; /* Space below the image */
-    border: 3px solid #4fb6c9; /* Border with highlight color */
-    box-shadow: 0 0 10px #4fb6c9, 0 0 20px #4fb6c9; /* Glow effect */
+    border: 0.1875rem solid #4fb6c9; /* 3px -> 0.1875rem */
+    box-shadow: 0 0 0.625rem #4fb6c9, 0 0 1.25rem #4fb6c9; /* Glow effect */
 }
 
 #about .education-list {
@@ -529,6 +530,118 @@
     box-shadow: 0 0 1.25rem #4fb6c9, 0 0 1.875rem #8ccad4; /* Intensify glow on hover */
 }
 
+/* Social Media Icons in Contact Section */
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 7.5rem; /* 120px -> 7.5rem */
+  width: 100%;
+  padding:0;
+  padding-top: 2.5rem; /* 40px -> 2.5rem */
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  margin: 0.625rem; /* 10px -> 0.625rem */
+  width: 3.125rem; /* 50px -> 3.125rem */
+  height: 3.125rem; /* 50px -> 3.125rem */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.wrapper .social-tooltip {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  font-size: 0.875rem; /* 14px -> 0.875rem */
+  background: #fff;
+  color: #333;
+  padding: 0.3125rem 0.5rem; /* 5px 8px -> 0.3125rem 0.5rem */
+  border-radius: 0.3125rem; /* 5px -> 0.3125rem */
+  box-shadow: 0 0.625rem 0.625rem rgba(0, 0, 0, 0.1); /* 10px -> 0.625rem */
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  text-align: center;
+}
+
+.wrapper .social-tooltip::before {
+  position: absolute;
+  content: "";
+  height: 0.5rem; /* 8px -> 0.5rem */
+  width: 0.5rem; /* 8px -> 0.5rem */
+  background: #fff;
+  bottom: -0.1875rem; /* -3px -> -0.1875rem */
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon a:hover .social-tooltip {
+  top: -2.8125rem; /* -45px -> -2.8125rem */
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Facebook Icon */
+.wrapper .facebook a:hover {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .facebook a:hover .social-tooltip,
+.wrapper .facebook a:hover .social-tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+/* Instagram Icon */
+.wrapper .instagram a:hover {
+  background: #e4405f;
+  color: #fff;
+}
+
+.wrapper .instagram a:hover .social-tooltip,
+.wrapper .instagram a:hover .social-tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+
+/* Email Icon */
+.wrapper .email a:hover {
+  background: #4fb6c9;
+  color: #fff;
+}
+
+.wrapper .email a:hover .social-tooltip,
+.wrapper .email a:hover .social-tooltip::before {
+  background: #4fb6c9;
+  color: #fff;
+}
+
 .example-2 {
     display: flex;
     justify-content: center;
@@ -610,6 +723,7 @@
     background-color: #6f2679;
 }
 
+/* Canvas styling */
 canvas {
     position: fixed; /* Fix the canvas to the viewport */
     top: 0;
@@ -620,3 +734,4 @@ canvas {
     z-index: -1; /* Place it behind all other content */
     background-color:#121212;
 }
+
