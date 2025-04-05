@@ -141,7 +141,7 @@ function update(t) {
 const sections = document.querySelectorAll(".section"); // Select all sections
 
 let currentSection = 0; // Tracks the current section
-const navButtons = document.querySelectorAll(".button-link");
+const navButtons = document.querySelectorAll(".nav-link");
 let isScrolling = false; // Cooldown flag
 
 // Scroll to a specific section
