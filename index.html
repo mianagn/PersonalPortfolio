@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
+    
+    <!-- Tooltip library -->
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css">
+    
+    <!-- Main JavaScript -->
     <script src="script.js" type="module" defer></script>
+    
+    <!-- WebGL library for cursor effects -->
     <script type="module" src="https://cdn.jsdelivr.net/npm/ogl@0.0.25/dist/ogl.mjs"></script>
+    
+    <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
     <title>Michael Anagnostou's Portfolio</title>
   </head>
   <body>
@@ -49,10 +63,24 @@
         </div>
         <div class="skills-box">
           <div class="skills-title">Current skills:</div>
-          <div class="skills-container">
-            <img class="skill-logo java" src="images/java-logo-1.png" alt="Java" />
-            <img class="skill-logo other" src="images/download-Photoroom (2).png" alt="Other Skills" />
-          </div>
+          <ul class="skills-list">
+            <li class="skill-item">
+              <i class="fa-brands fa-java skill-logo"></i>
+              <span class="skill-name">Java</span>
+            </li>
+            <li class="skill-item">
+              <i class="fa-brands fa-html5 skill-logo"></i>
+              <span class="skill-name">HTML</span>
+            </li>
+            <li class="skill-item">
+              <i class="fa-brands fa-css3-alt skill-logo"></i>
+              <span class="skill-name">CSS</span>
+            </li>
+            <li class="skill-item">
+              <i class="fa-brands fa-js skill-logo"></i>
+              <span class="skill-name">JavaScript</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -65,13 +93,13 @@
         <div class="project-card">
           <img src="images/personalPortfolio.png" alt="Personal Portfolio" class="project-image">
           <h2 class="project-title">Personal Portfolio</h2>
-          <p class="project-description">A portfolio website built with html/css/JS</p>
+          <p class="project-description">An interactive portfolio website built with html/css/JS</p>
           <a href="https://github.com/mianagn/Personal-portfolio" target="_blank" class="project-link">Github repo</a>
         </div>
         <div class="project-card">
           <img src="images/Warrior.VS.Aliens.png" alt="Warrior VS Aliens" class="project-image">
           <h2 class="project-title">Warrior VS Aliens</h2>
-          <p class="project-description">OOP based, text game where you face off a wave of zombies in turn-based combat, built with Java</p>
+          <p class="project-description">Text game where you face off a wave of zombies in turn-based combat, built with Java</p>
           <a href="https://github.com/mianagn/Warrior.VS.Aliens" target="_blank" class="project-link">Github repo</a>
         </div>
       </div>
@@ -99,7 +127,7 @@
       <p class="section-description">Feel free to reach out to me through any of the following:</p>
       <ul class="social-links">
         <li class="social-item facebook">
-          <a href="https://www.facebook.com/your-profile" target="_blank" aria-label="Facebook">
+          <a href="https://www.facebook.com/profile.php?id=100004834873216" target="_blank" aria-label="Facebook">
             <span class="tooltip">Facebook</span>
             <svg
               viewBox="0 0 320 512"
@@ -114,7 +142,7 @@
           </a>
         </li>
         <li class="social-item instagram">
-          <a href="https://www.instagram.com/your-profile" target="_blank" aria-label="Instagram">
+          <a href="https://www.instagram.com/mixalhs_anagnwstou_/" target="_blank" aria-label="Instagram">
             <span class="tooltip">Instagram</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -163,16 +191,14 @@
         <li class="social-item github">
           <a href="https://www.github.com/mianagn" target="_blank" aria-label="GitHub">
             <span class="tooltip">GitHub</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1.2em"
-              fill="currentColor"
-              class="bi bi-github"
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              height="1.2em" 
+              fill="currentColor" 
+              class="bi bi-github" 
               viewBox="0 0 16 16"
             >
-              <path
-                d="M8 0C3.58 0 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
-              ></path>
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
             </svg>
           </a>
         </li>
